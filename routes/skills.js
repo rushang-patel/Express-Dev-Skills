@@ -1,12 +1,17 @@
-var express = require('express');
-var router = express.Router();
-var skillsCtrl = require('../controllers/skills');
-
-// All actual paths start with "/skills"
+const express = require('express');
+const router = express.Router();
+const skillsCtrl = require('../controllers/skills');
 
 // GET /skills
 router.get('/', skillsCtrl.index);
-// GET /todos/:id
+
+// GET /skills/new
+router.get('/new', skillsCtrl.new);
+
+// POST /skills
+router.post('/', skillsCtrl.create);
+
+// GET /skills/:id
 router.get('/:id', skillsCtrl.show);
 
 module.exports = router;

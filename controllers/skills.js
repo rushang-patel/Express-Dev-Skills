@@ -16,7 +16,21 @@ function show(req, res) {
   });
 }
 
+function newSkill(req, res) {
+  res.render('skills/newSkills', {
+    title: 'Input Skills'
+  });
+}
+
+function create(req, res) {
+  const { skill, description, experience } = req.body;
+  Skill.addSkill(skill, description, experience);
+  res.redirect('/skills');
+}
+
 module.exports = {
   index,
-  show
+  show,
+  new: newSkill,
+  create
 };

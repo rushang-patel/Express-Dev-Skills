@@ -3,6 +3,21 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.header {
+  text-align: right;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: #357d39;
+  transform: scale(1.1);
+  transition: transform .1s ease-in;
 }

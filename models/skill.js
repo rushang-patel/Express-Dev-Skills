@@ -8,7 +8,7 @@ const skills = [
   {
     id: 127904,
     skill: 'Node.js',
-    description: 'A JavaScript runtime built on Chrome\'s V8 JavaScript engine',
+    description: "A JavaScript runtime built on Chrome's V8 JavaScript engine",
     experience: 'Advanced'
   },
   {
@@ -19,11 +19,6 @@ const skills = [
   }
 ];
 
-module.exports = {
-  getAll,
-  getOne
-};
-
 function getOne(id) {
   id = parseInt(id);
   return skills.find(skill => skill.id === id);
@@ -32,3 +27,19 @@ function getOne(id) {
 function getAll() {
   return skills;
 }
+
+function addSkill(skill, description, experience) {
+  const newSkill = {
+    id: Date.now(),
+    skill,
+    description,
+    experience
+  };
+  skills.push(newSkill);
+}
+
+module.exports = {
+  getAll,
+  getOne,
+  addSkill
+};
