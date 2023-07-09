@@ -1,4 +1,4 @@
-const skills = [
+let skills = [
   {
     id: 125223,
     skill: 'JavaScript',
@@ -38,8 +38,14 @@ function addSkill(skill, description, experience) {
   skills.push(newSkill);
 }
 
+function deleteSkill(id) {
+  id = parseInt(id);
+  skills = skills.filter(skill => skill.id !== id);
+}
+
 module.exports = {
   getAll,
   getOne,
-  addSkill
+  addSkill,
+  deleteSkill
 };
