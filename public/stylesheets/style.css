@@ -1,23 +1,50 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 5vmin;
+  font: 1.4vmin "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(150, 194, 182);
 }
 
 .header {
+  position: fixed;
   text-align: right;
+  background-color: rgb(39, 89, 83);
+  padding: 3vmin;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+h1 {
+  text-align: center;
+  padding: 10vmin;
 }
 
 .button {
   display: inline-block;
-  padding: 10px;
+  padding: 1vmin;
   background-color: #4CAF50;
   color: white;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 1vmin;
 }
 
 .button:hover {
   background-color: #357d39;
   transform: scale(1.1);
   transition: transform .1s ease-in;
+}
+
+.delete-button {
+  display: inline-block;
+  padding: 1vmin;
+  background-color: maroon;
+  color: white;
+  text-decoration: none;
+  border-radius: 1vmin;
+}
+
+.delete-button:hover {
+  background-color: red;
+  transform: scale(1.1);
+  transition: transform .2s ease-in;
 }
